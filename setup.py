@@ -9,7 +9,7 @@ setup(
         'numpy',
         'Pillow',
     ],
-    author='Manav MM21B038',
+    author='MM21B038',
     author_email='mm21b038@smail.iitm.ac.in',
     description='A package for your DL model',
     long_description=open('README.md').read(),

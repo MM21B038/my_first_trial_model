@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='your_model_package',
+    name='its_a_trial',
     version='1.0.0',
     packages=find_packages(),
     install_requires=[

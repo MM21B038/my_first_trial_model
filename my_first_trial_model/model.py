@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator, image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 import numpy as np
 
 class YourModel:
@@ -26,8 +26,8 @@ class YourModel:
         self.model.fit(x=train_data_gen, validation_data=val_data_gen, epochs=epochs)
 
     def predict(self, image_path, target_size=(64, 64)):
-        test_image = image.load_img(image_path, target_size=target_size)
-        test_image = image.img_to_array(test_image)
+        test_image = load_img(image_path, target_size=target_size)
+        test_image = img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis=0)
         result = self.model.predict(test_image)
         
